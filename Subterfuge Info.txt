@@ -1,0 +1,31 @@
+martyr      = 0
+elder       = 0
+assassin    = 0
+saboteur    = 0
+doubleAgent = 0
+lietenant   = 0
+general     = 0
+warHero     = 0
+king        = 0
+infiltrator = 0
+
+# movement specs
+helmsman    = 0
+smuggler    = 0
+pirate      = 0
+navigator   = 0
+admiral     = 0
+# lietenant   = 0
+# general     = 0
+
+# outpost specs
+inspector   = 0
+security    = 0
+queen       = 0
+princess    = 0
+investigator= 0
+tinkerer    = 0
+minister    = 0
+sentry      = 0
+hypnotist   = 0
+# king        = 0

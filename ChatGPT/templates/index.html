@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat with ChatGPT</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>Chat with ChatGPT</h1>
+
+    <div id="chatbox"></div>
+
+    <form onsubmit="submitForm(event)">
+        <input type="text" id="userinput" autocomplete="off">
+        <button type="submit">Send</button>
+    </form>
+
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+
+            var inputText = $('#userinput').val();
+
+            $.ajax({
+                url: '/query',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({'text': inputText}),
+                success: function(response) {
+                    var botResponse = $('<p>').text(response.text);
+                    $('#chatbox').append(botResponse);
+                    $('#userinput').val('');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
